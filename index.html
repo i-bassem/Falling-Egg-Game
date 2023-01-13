@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling egg</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="images/egg.png">
+</head>
+<body>
+     <div class="bg"></div>
+<!-- Top Container -->
+     <div class="topcont">
+
+     <div id="lost"> </div>
+     <div id="score"></div>
+     <div id="lastScore"></div>
+     
+    </div>
+
+     <button id="btn" > <img id="start" src="images/play.png" alt="Start"> </button>
+
+     <img src="images/egg.png" class="invis"  id="egg"/>
+<!-- Game Over -->
+    <div class="gameEnd">
+
+        <img src="images/gameover.gif" id="gameover" />
+        <img src="images/playagain.jpg" class="playAgain"  usemap="#mapp">
+        <map name="mapp">
+           <area shape="rect" coords="0, 25, 50, 50"   alt="yes" href="">
+           <area shape="rect" coords="51, 25, 100, 50"  alt="no">
+        </map> 
+   
+    </div>
+<!-- Buttom Container -->
+    <div  id="cont">
+
+     <img src="images/basket.png" id="basket"/>
+     <img src="images/crashed egg.png" id="crashed" class="invis"/>
+
+    </div>
+     
+    
+     <script src="JS/egg.js"></script>
+</body>
+</html>
