@@ -14,7 +14,7 @@ let losing = 0 ,scoring = 0
 
 
 let last = localStorage.getItem("last");
-
+if(last==null){last=0};
 //Score at the begining
 score.innerText = `Score : ${scoring}`;
 lose.innerText = `Lost : ${losing}`;
@@ -25,18 +25,17 @@ gameOver.style.display="none";
 
 // Sound Effects
 function wsound(){
-    var snd = new Audio('../sounds/bite.mp3');
+    var snd = new Audio('JS/sounds/bite.mp3');
     snd.play();       
 }
 function lsound(){
-    var snd = new Audio('../sounds/lose point .mp3');
+    var snd = new Audio('JS/sounds/lose point.mp3');
     snd.play();        
 }
 function gosound(){
-    var snd = new Audio('../sounds/gameover.mp3');
+    var snd = new Audio('JS/sounds/gameover.mp3');
     snd.play();        
 }
-
 
 function start(){
       
@@ -82,12 +81,20 @@ egg.style.left = hEgg + "px";
 // Intial H-Position
 hPos();
 // Intial V-Position
-let down=5;
+let down=0;
+
+//(Action👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇)
+//We want  to sync the vertical movement  with the animation in CSS
 // Vertical Movement (Fn)
 function moveDwn(){
 
-down += 100;
+egg.classList.add("eggmv");
 
+down += 85;
+
+// console.log('*****************************');
+// console.log(down);
+// console.log(egg.getBoundingClientRect().y);
 // Egg Reached the end of screen
 if(down > (window.innerHeight - egg.style.height)-100){
 
@@ -106,13 +113,15 @@ if( Math.abs(basket.getBoundingClientRect().x - egg.getBoundingClientRect().x) <
     crashed.classList.remove("invis")
     lsound(); 
     losing ++;
-    console.log(losing);
     lose.innerText = `Lost : ${losing}`;
     //GAME OVER
     if(losing == 5){
         // Saving The Last Score in local storage
         window.localStorage.setItem("last",`${scoring}`);
         // Stopping the Game 
+
+         egg.classList.remove("eggmv");
+
          clearInterval(id);
          gosound();
          body.classList.add("darker-span");
@@ -122,11 +131,12 @@ if( Math.abs(basket.getBoundingClientRect().x - egg.getBoundingClientRect().x) <
 //***invoking the H postion function
 hPos();
 // intial vertical value
-down = 5;
+down = 0;
 }
+
 egg.style.top = down + "px";
 }
-let id = setInterval(moveDwn,500);
+let id = setInterval(moveDwn,600);
 };
 
 // GAME START @ PRESS 

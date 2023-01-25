@@ -6,12 +6,8 @@
 
 body, html {
     height: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin: 0px;
 } 
-
 
 .bg {
      background-image:  url('../images/background0.png');
@@ -24,7 +20,6 @@ body, html {
     filter: brightness(50%);
 }
 
-
 .invis{
     display: none;
 }
@@ -33,6 +28,24 @@ body, html {
     height: 100px;
     position: absolute;
 }
+
+/* (Action👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇) */
+/* We want to sync it with javascript moveDwn() fnction */
+/* .eggmv{
+    animation-name: example;
+    animation-duration: 3s ;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease;
+}
+@keyframes example {
+    0%   { top:0px}
+    20%  { top:85px;}
+    40%  { top: 170px;}
+    60%  { top: 255px;}
+    80%  { top: 340px;}
+    100% { top: 425px;}
+  } */
+
 /* Top Container */
 .topcont{
     display: flex;
