@@ -90,26 +90,30 @@ function moveDwn(){
 
 egg.classList.add("eggmv");
 
-down += 85;
-
+// down += 85;
 // console.log('*****************************');
 // console.log(down);
 // console.log(egg.getBoundingClientRect().y);
 // Egg Reached the end of screen
-if(down > (window.innerHeight - egg.style.height)-100){
+if( egg.getBoundingClientRect().y > (window.innerHeight - egg.style.height)-100){
 
 // Case Catched
 if( Math.abs(basket.getBoundingClientRect().x - egg.getBoundingClientRect().x) < 40 ){
-  
+    // Adding animation class
+    egg.classList.remove("eggmv");
     crashed.classList.add("invis") 
     wsound();
     scoring++;
     //Scoring
     score.innerText = `Score : ${scoring}`;
     crashed.style.left = egg.style.left;
+
 // Case If not catched 
 }else{
     crashed.style.left = egg.style.left;
+    //Removing the animation class
+    egg.classList.remove("eggmv");
+    egg.classList.remove("eggmv");
     crashed.classList.remove("invis")
     lsound(); 
     losing ++;
@@ -119,7 +123,7 @@ if( Math.abs(basket.getBoundingClientRect().x - egg.getBoundingClientRect().x) <
         // Saving The Last Score in local storage
         window.localStorage.setItem("last",`${scoring}`);
         // Stopping the Game 
-
+        //Removing the animation class
          egg.classList.remove("eggmv");
 
          clearInterval(id);
@@ -134,7 +138,7 @@ hPos();
 down = 0;
 }
 
-egg.style.top = down + "px";
+// egg.style.top = down + "px";
 }
 let id = setInterval(moveDwn,600);
 };

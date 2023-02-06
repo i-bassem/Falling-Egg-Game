@@ -15,3 +15,6 @@ You lose when you fail to catch the egg five times.
 2- setInterval()
 3- .addEventListener()
 4- HTMLAudioElement
+5- Animations
+
+![game image](images/Game.jpg)

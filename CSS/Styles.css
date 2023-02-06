@@ -3,12 +3,11 @@
 *{
     font-family: 'Lilita One', cursive;
 }
-
 body, html {
     height: 100%;
     margin: 0px;
+    overflow-y: hidden;
 } 
-
 .bg {
      background-image:  url('../images/background0.png');
      height: 100%;
@@ -31,20 +30,21 @@ body, html {
 
 /* (Action👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇) */
 /* We want to sync it with javascript moveDwn() fnction */
-/* .eggmv{
+.eggmv{
     animation-name: example;
     animation-duration: 3s ;
-    animation-iteration-count:infinite;
-    animation-timing-function:ease;
+    /* animation-iteration-count:infinite; */
+    
+    animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @keyframes example {
-    0%   { top:0px}
-    20%  { top:85px;}
-    40%  { top: 170px;}
-    60%  { top: 255px;}
-    80%  { top: 340px;}
-    100% { top: 425px;}
-  } */
+    0%   { top:  0vh}
+    20%  { top: 16vh}
+    40%  { top: 32vh}
+    60%  { top: 48vh}
+    80%  { top: 64vh}
+    100% { top: 85vh}
+  }
 
 /* Top Container */
 .topcont{
