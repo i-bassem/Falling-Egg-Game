@@ -25,15 +25,15 @@ gameOver.style.display="none";
 
 // Sound Effects
 function wsound(){
-    var snd = new Audio('JS/sounds/bite.mp3');
+    var snd = new Audio('sounds/bite.mp3');
     snd.play();       
 }
 function lsound(){
-    var snd = new Audio('JS/sounds/lose point.mp3');
+    var snd = new Audio('sounds/lose point.mp3');
     snd.play();        
 }
 function gosound(){
-    var snd = new Audio('JS/sounds/gameover.mp3');
+    var snd = new Audio('sounds/gameover.mp3');
     snd.play();        
 }
 
