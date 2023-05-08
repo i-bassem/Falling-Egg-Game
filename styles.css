@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:ital,wght@1,900&display=swap');
+ 
+*{
+    font-family: 'Lilita One', cursive;
+}
+body, html {
+    height: 100%;
+    margin: 0px;
+    overflow-y: hidden;
+} 
+.bg {
+     background-image:  url('images/background0.png');
+     height: 100%;
+     background-size:cover ;
+     background-blend-mode: darken;
+     
+}
+.darker-span {
+    filter: brightness(50%);
+}
+
+.invis{
+    display: none;
+}
+#egg  {
+    width:100px;
+    height: 100px;
+    position: absolute;
+}
+
+/* (Action👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇) */
+/* We want to sync it with javascript moveDwn() fnction */
+.eggmv{
+    animation-name: example;
+    animation-duration: 3s ;
+    /* animation-iteration-count:infinite; */
+    
+    animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes example {
+    0%   { top:  0vh}
+    20%  { top: 16vh}
+    40%  { top: 32vh}
+    60%  { top: 48vh}
+    80%  { top: 64vh}
+    100% { top: 85vh}
+  }
+
+/* Top Container */
+.topcont{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    top: 1vh;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0px;   
+}
+#lost{
+    font-family: Lilita One;
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+    margin-left: 1vw;
+}
+#score{
+    font-family: Lilita One;
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+    margin-left: 1vw;
+}
+#lastScore{
+    font-family: Lilita One;
+    font-size: 25px;
+    width: 150px;
+    height: 50px;
+    margin-right: 1vw;
+}
+
+/* Start Button */
+#btn{
+    display: block;
+    width: 100px;
+    height: 50px;
+    position:absolute;
+    margin-top: -65vh;
+    margin-left: 45%;
+}
+#start{
+    margin-top: -2%;
+    width: 100px;
+    height: 48px;
+    position: relative;
+    margin-left: -10%;
+    margin-right: -10%;
+}
+#btn:hover{
+    cursor:pointer;
+    transform:scale(1.2)translate(smooth);
+}
+
+/* End Game */
+.gameEnd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+    bottom: 20vh;
+    top: 20vh;
+}  
+#gameover {
+    width: 100vw;
+    height: 50vh;
+}
+.playAgain{
+    width: 100px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Buttom Container */
+#cont{
+    display: flex;
+    justify-content: center;
+    width: 97%;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+#basket{
+    width:100px;
+    height: 100px;
+    position:absolute;
+    z-index:3 ;
+}
+#crashed{
+    width:100px;
+    height: 100px;
+    position:absolute;
+}
+
+/*ssssk*/
+
