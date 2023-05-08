@@ -9,7 +9,7 @@ body, html {
     overflow-y: hidden;
 } 
 .bg {
-     background-image:  url('../images/background0.png');
+     background-image:  url('images/background0.png');
      height: 100%;
      background-size:cover ;
      background-blend-mode: darken;
