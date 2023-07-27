@@ -2,7 +2,7 @@
 
 ## Description
 
-Falling Egg Game, Try to catch the egg in the bsket before it's too late, 
+Falling Egg Game, Try to catch the egg in the basket before it's too late, 
 You lose when you fail to catch the egg five times.
 
 Try it =====>  https://i-bassem.github.io/Falling-Egg-Game/
