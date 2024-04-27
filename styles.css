@@ -13,7 +13,6 @@ body, html {
      height: 100%;
      background-size:cover ;
      background-blend-mode: darken;
-     
 }
 .darker-span {
     filter: brightness(50%);
